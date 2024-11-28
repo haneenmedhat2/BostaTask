@@ -13,6 +13,10 @@
 		22371F922CF8FB9600B3C140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22371F902CF8FB9600B3C140 /* Main.storyboard */; };
 		22371F942CF8FBA100B3C140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22371F932CF8FBA100B3C140 /* Assets.xcassets */; };
 		22371F972CF8FBA100B3C140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22371F952CF8FBA100B3C140 /* LaunchScreen.storyboard */; };
+		22371FA02CF8FD9700B3C140 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 22371F9F2CF8FD9700B3C140 /* RxCocoa */; };
+		22371FA22CF8FD9700B3C140 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 22371FA12CF8FD9700B3C140 /* RxSwift */; };
+		22371FA52CF8FEA700B3C140 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 22371FA42CF8FEA700B3C140 /* Moya */; };
+		22371FAB2CF9021E00B3C140 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 22371FAA2CF9021E00B3C140 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22371FAB2CF9021E00B3C140 /* Kingfisher in Frameworks */,
+				22371FA22CF8FD9700B3C140 /* RxSwift in Frameworks */,
+				22371FA02CF8FD9700B3C140 /* RxCocoa in Frameworks */,
+				22371FA52CF8FEA700B3C140 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +91,12 @@
 			dependencies = (
 			);
 			name = BostaTasks;
+			packageProductDependencies = (
+				22371F9F2CF8FD9700B3C140 /* RxCocoa */,
+				22371FA12CF8FD9700B3C140 /* RxSwift */,
+				22371FA42CF8FEA700B3C140 /* Moya */,
+				22371FAA2CF9021E00B3C140 /* Kingfisher */,
+			);
 			productName = BostaTasks;
 			productReference = 22371F872CF8FB9600B3C140 /* BostaTasks.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,11 @@
 				Base,
 			);
 			mainGroup = 22371F7E2CF8FB9600B3C140;
+			packageReferences = (
+				22371F9E2CF8FD9700B3C140 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				22371FA32CF8FEA700B3C140 /* XCRemoteSwiftPackageReference "Moya" */,
+				22371FA92CF9021E00B3C140 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 22371F882CF8FB9600B3C140 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,6 +379,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		22371F9E2CF8FD9700B3C140 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		22371FA32CF8FEA700B3C140 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		22371FA92CF9021E00B3C140 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		22371F9F2CF8FD9700B3C140 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22371F9E2CF8FD9700B3C140 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		22371FA12CF8FD9700B3C140 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22371F9E2CF8FD9700B3C140 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		22371FA42CF8FEA700B3C140 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22371FA32CF8FEA700B3C140 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		22371FAA2CF9021E00B3C140 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22371FA92CF9021E00B3C140 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 22371F7F2CF8FB9600B3C140 /* Project object */;
 }
