@@ -11,8 +11,11 @@ import RxCocoa
 import Moya
 import Kingfisher
 
-class ViewController: UIViewController {
+class ProfileController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,4 +23,5 @@ class ViewController: UIViewController {
 
 
 }
+
 
