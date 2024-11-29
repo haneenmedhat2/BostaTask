@@ -22,6 +22,8 @@
 		22371FB72CF92C5800B3C140 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371FB62CF92C5800B3C140 /* NetworkService.swift */; };
 		22371FB92CF9343400B3C140 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371FB82CF9343400B3C140 /* ProfileViewModel.swift */; };
 		22371FBB2CF9E56100B3C140 /* Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371FBA2CF9E56100B3C140 /* Albums.swift */; };
+		22371FBD2CFA023A00B3C140 /* AlbumDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371FBC2CFA023A00B3C140 /* AlbumDetailsController.swift */; };
+		22371FBF2CFA0B2300B3C140 /* AlbumDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371FBE2CFA0B2300B3C140 /* AlbumDetailsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		22371FB62CF92C5800B3C140 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		22371FB82CF9343400B3C140 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		22371FBA2CF9E56100B3C140 /* Albums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Albums.swift; sourceTree = "<group>"; };
+		22371FBC2CFA023A00B3C140 /* AlbumDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsController.swift; sourceTree = "<group>"; };
+		22371FBE2CFA0B2300B3C140 /* AlbumDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 			children = (
 				22371F8E2CF8FB9600B3C140 /* ProfileController.swift */,
 				22371FB22CF91FF300B3C140 /* AlbumsCell.swift */,
+				22371FBC2CFA023A00B3C140 /* AlbumDetailsController.swift */,
+				22371FBE2CFA0B2300B3C140 /* AlbumDetailsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,11 +226,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22371FBD2CFA023A00B3C140 /* AlbumDetailsController.swift in Sources */,
 				22371F8F2CF8FB9600B3C140 /* ProfileController.swift in Sources */,
 				22371F8B2CF8FB9600B3C140 /* AppDelegate.swift in Sources */,
 				22371F8D2CF8FB9600B3C140 /* SceneDelegate.swift in Sources */,
 				22371FBB2CF9E56100B3C140 /* Albums.swift in Sources */,
 				22371FB52CF92B1A00B3C140 /* User.swift in Sources */,
+				22371FBF2CFA0B2300B3C140 /* AlbumDetailsCell.swift in Sources */,
 				22371FB72CF92C5800B3C140 /* NetworkService.swift in Sources */,
 				22371FB32CF91FF300B3C140 /* AlbumsCell.swift in Sources */,
 				22371FB92CF9343400B3C140 /* ProfileViewModel.swift in Sources */,
