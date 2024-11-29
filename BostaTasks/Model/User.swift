@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct User : Decodable {
+struct User : Codable {
     let id : Int?
     let name : String?
     let address : Address?
 }
 
-struct Address: Decodable {
+struct Address: Codable {
     let street : String?
     let suite : String?
     let city : String?

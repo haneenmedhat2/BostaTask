@@ -23,7 +23,6 @@ class ProfileController: UIViewController {
     }
     
     func viewUserData(){
-        
         profileViewModel.getUser()
         profileViewModel.userPubSub.subscribe{[weak self] value in
             guard let self = self else {return}
@@ -35,7 +34,12 @@ class ProfileController: UIViewController {
             self.nameLabel.text = name
             self.addressLabel.text = fullAddress
             
+            self.getUserAlbum(userId: user?.id ?? 0)
             }.disposed(by: disposeBag)
+      }
+    
+    func getUserAlbum(userId:Int){
+        profileViewModel.getAlbums(let: userId)
     }
 
 
