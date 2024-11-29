@@ -105,17 +105,17 @@
         <!--Album Details Controller-->
         <scene sceneID="JAL-TY-Ghq">
             <objects>
-                <viewController id="wzo-tX-scL" customClass="AlbumDetailsController" customModule="BostaTasks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="details" id="wzo-tX-scL" customClass="AlbumDetailsController" customModule="BostaTasks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gQn-Sk-1UC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gIn-pd-ECV">
-                                <rect key="frame" x="0.0" y="64" width="414" height="51"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3i9-1Q-7HL">
-                                <rect key="frame" x="20" y="115" width="374" height="747"/>
+                                <rect key="frame" x="20" y="159" width="374" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t78-Xc-f6Y">
                                     <size key="itemSize" width="199" height="169"/>
@@ -162,6 +162,7 @@
                             <constraint firstItem="gIn-pd-ECV" firstAttribute="top" secondItem="YfK-G3-sP7" secondAttribute="top" constant="20" id="yYl-pl-5cx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="NG9-u1-isy"/>
                     <connections>
                         <outlet property="collectionView" destination="3i9-1Q-7HL" id="GUm-1D-HbE"/>
                         <outlet property="search" destination="gIn-pd-ECV" id="Dt3-Ge-wiT"/>
@@ -169,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biu-bS-k1u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472.4637681159422" y="59.598214285714285"/>
+            <point key="canvasLocation" x="2382.608695652174" y="59.598214285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wcf-Uq-fMy">
@@ -188,6 +189,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fAo-uO-f3p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-10.144927536231885" y="49.553571428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Zq-HD-4aW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kk8-z8-eDg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8nF-BX-LaY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wzo-tX-scL" kind="relationship" relationship="rootViewController" id="gqr-Ay-O0K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dz2-OI-kiG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472.4637681159422" y="59.598214285714285"/>
         </scene>
     </scenes>
     <resources>

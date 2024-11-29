@@ -20,6 +20,7 @@ class ProfileController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewUserData()
+        setupCellSelection()
     }
     
     func viewUserData(){
@@ -34,18 +35,30 @@ class ProfileController: UIViewController {
             self.nameLabel.text = name
             self.addressLabel.text = fullAddress
             
-            self.getUserAlbum(userId: user?.id ?? 0)
+            self.setUpTable(userId: user?.id ?? 0)
             }.disposed(by: disposeBag)
       }
     
-    func getUserAlbum(userId:Int){
-        profileViewModel.getAlbums(let: userId)
+    func setUpTable(userId:Int){
+        profileViewModel.getAlbums(userId: userId)
         profileViewModel.userAlbumsPub.bind(to: tableView.rx.items(cellIdentifier: "albums", cellType: AlbumsCell.self)) { (index,item,cell) in
             
             cell.setupCell(title: item.title ?? "No title found")
         }.disposed(by: disposeBag)
             
         
+    }
+    
+    func setupCellSelection(){
+        tableView.rx.modelSelected(Albums.self)
+            .subscribe(onNext: { [weak self] selectedItem in
+                guard let self = self else {return}
+                let detailsController = self.storyboard?.instantiateViewController(withIdentifier: "details") as! AlbumDetailsController
+                detailsController.album = selectedItem
+                self.navigationController?.pushViewController(detailsController, animated: true)
+                
+                
+            }).disposed(by: disposeBag)
     }
 
 

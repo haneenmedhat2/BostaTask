@@ -42,7 +42,7 @@ class ProfileViewModel{
     }
     
     
-    func getAlbums(let userId : Int){
+    func getAlbums(userId : Int){
       provider.request(.getUserAlbums(userId: userId)){ [weak self] result in
           guard let self = self else {return}
             switch result {

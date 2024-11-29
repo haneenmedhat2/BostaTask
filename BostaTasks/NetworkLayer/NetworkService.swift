@@ -11,6 +11,7 @@ import Moya
 enum NetwrokService {
     case getUser
     case getUserAlbums(userId:Int)
+    case getPhotos(albumId:Int)
 }
 
 extension NetwrokService : TargetType {
@@ -24,8 +25,10 @@ extension NetwrokService : TargetType {
         switch self {
         case .getUser :
             return "/users"
-        case .getUserAlbums(userId: let userId):
+        case .getUserAlbums(userId: _):
             return "/albums"
+        case .getPhotos(albumId: _):
+            return "/photos"
         }
     }
 
