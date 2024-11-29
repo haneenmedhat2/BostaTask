@@ -20,5 +20,9 @@ class AlbumsCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setupCell(title:String){
+        albumTitle.text = title
+    }
 
 }

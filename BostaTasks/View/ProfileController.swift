@@ -40,9 +40,30 @@ class ProfileController: UIViewController {
     
     func getUserAlbum(userId:Int){
         profileViewModel.getAlbums(let: userId)
+        profileViewModel.userAlbumsPub.bind(to: tableView.rx.items(cellIdentifier: "albums", cellType: AlbumsCell.self)) { (index,item,cell) in
+            
+            cell.setupCell(title: item.title ?? "No title found")
+        }.disposed(by: disposeBag)
+            
+        
     }
 
 
 }
 
+extension ProfileController : UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UIView()
+        let label = UILabel(frame: CGRect(x: 16, y: -15, width: tableView.frame.width - 32, height: 40))
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.text = "My Albums"
+        header.addSubview(label)
+        return header
+    }
+}
 

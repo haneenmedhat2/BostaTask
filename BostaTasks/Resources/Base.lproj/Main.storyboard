@@ -26,7 +26,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F54-7g-Hol">
-                                        <rect key="frame" x="22" y="16" width="394" height="0.0"/>
+                                        <rect key="frame" x="22" y="16" width="382" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -38,7 +38,7 @@
                                     <constraint firstItem="02s-0W-o2p" firstAttribute="top" secondItem="8Og-M5-0vx" secondAttribute="top" constant="6" id="YUP-lK-xzm"/>
                                     <constraint firstItem="02s-0W-o2p" firstAttribute="leading" secondItem="8Og-M5-0vx" secondAttribute="leading" constant="22" id="bxY-6Z-Hqv"/>
                                     <constraint firstAttribute="trailing" secondItem="02s-0W-o2p" secondAttribute="trailing" constant="-22" id="jzT-Ac-PlX"/>
-                                    <constraint firstItem="F54-7g-Hol" firstAttribute="trailing" secondItem="02s-0W-o2p" secondAttribute="trailing" id="lOy-sG-oQY"/>
+                                    <constraint firstItem="F54-7g-Hol" firstAttribute="trailing" secondItem="02s-0W-o2p" secondAttribute="trailing" constant="-12" id="lOy-sG-oQY"/>
                                     <constraint firstItem="F54-7g-Hol" firstAttribute="leading" secondItem="02s-0W-o2p" secondAttribute="leading" id="uty-zI-jbc"/>
                                 </constraints>
                             </view>
@@ -54,7 +54,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="non esse culpa molestie omnis sed optio" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJR-lb-K8T">
-                                                    <rect key="frame" x="20" y="30" width="354" height="20.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="354" height="80"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -64,6 +64,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="GJR-lb-K8T" secondAttribute="trailing" id="XNI-0S-jr6"/>
                                                 <constraint firstItem="GJR-lb-K8T" firstAttribute="leading" secondItem="OYr-Y5-edS" secondAttribute="leading" constant="20" symbolic="YES" id="fp5-85-DYj"/>
                                                 <constraint firstItem="GJR-lb-K8T" firstAttribute="centerY" secondItem="OYr-Y5-edS" secondAttribute="centerY" id="jO3-fh-uWG"/>
+                                                <constraint firstItem="GJR-lb-K8T" firstAttribute="height" secondItem="OYr-Y5-edS" secondAttribute="height" id="oVr-R3-iuh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -71,6 +72,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Eey-2i-EYb"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -95,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="50"/>
+            <point key="canvasLocation" x="770" y="50"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wcf-Uq-fMy">

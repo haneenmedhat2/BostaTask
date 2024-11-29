@@ -43,12 +43,13 @@ class ProfileViewModel{
     
     
     func getAlbums(let userId : Int){
-        provider.request(.getUserAlbums(userId: userId)){ result in
+      provider.request(.getUserAlbums(userId: userId)){ [weak self] result in
+          guard let self = self else {return}
             switch result {
             case .success(let response):
                 do{
                     let albums = try JSONDecoder().decode([Albums].self, from: response.data)
-                    print(albums)
+                    self.userAlbumsPub.onNext(albums)
                     
                 }catch(let error){
                    print("Error decoding album's data \(error)")
