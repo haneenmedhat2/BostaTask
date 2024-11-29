@@ -11,5 +11,5 @@ struct Photos : Codable {
     let albumId : Int?
     let id : Int?
     let title : String?
-    let thumbnailUrl : String?
+    let url : String?
 }

@@ -12,14 +12,16 @@ import RxSwift
 class AlbumDetailsVM{
     
     let provider = MoyaProvider<NetwrokService>()
+    let photoPublishSub : PublishSubject<[Photos]> = PublishSubject()
     
     func getImages(albumId:Int){
-        provider.request(.getPhotos(albumId: albumId)){ result in
+        provider.request(.getPhotos(albumId: albumId)){ [weak self] result in
+            guard let self = self else {return}
             switch result {
             case .success(let response):
                 do{
                     let photos = try JSONDecoder().decode([Photos].self, from: response.data)
-                    print(photos)
+                    self.photoPublishSub.onNext(photos)
                     
                 }catch(let error){
                     print("Error in decoding photos\(error)")

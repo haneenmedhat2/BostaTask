@@ -115,7 +115,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3i9-1Q-7HL">
-                                <rect key="frame" x="20" y="159" width="374" height="703"/>
+                                <rect key="frame" x="0.0" y="159" width="414" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t78-Xc-f6Y">
                                     <size key="itemSize" width="199" height="169"/>
@@ -125,29 +125,32 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="albumDetails" id="exP-uB-Tfc" customClass="AlbumDetailsCell" customModule="BostaTasks" customModuleProvider="target">
-                                        <rect key="frame" x="87.5" y="0.0" width="199" height="169"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="199" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qkc-mn-mO6">
                                             <rect key="frame" x="0.0" y="0.0" width="199" height="169"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XPH-2d-cLo">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yfV-I8-iv3">
                                                     <rect key="frame" x="0.0" y="0.0" width="199" height="169"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="XPH-2d-cLo" firstAttribute="top" secondItem="Qkc-mn-mO6" secondAttribute="top" id="K6E-DB-uvr"/>
-                                                <constraint firstAttribute="bottom" secondItem="XPH-2d-cLo" secondAttribute="bottom" id="UWt-aV-Ya2"/>
-                                                <constraint firstItem="XPH-2d-cLo" firstAttribute="leading" secondItem="Qkc-mn-mO6" secondAttribute="leading" id="cti-6O-Nbf"/>
-                                                <constraint firstAttribute="trailing" secondItem="XPH-2d-cLo" secondAttribute="trailing" id="d2Z-6d-TIb"/>
+                                                <constraint firstAttribute="trailing" secondItem="yfV-I8-iv3" secondAttribute="trailing" id="5wz-KI-ARn"/>
+                                                <constraint firstItem="yfV-I8-iv3" firstAttribute="leading" secondItem="Qkc-mn-mO6" secondAttribute="leading" id="Keo-2C-EhB"/>
+                                                <constraint firstAttribute="bottom" secondItem="yfV-I8-iv3" secondAttribute="bottom" id="d6x-k8-ql7"/>
+                                                <constraint firstItem="yfV-I8-iv3" firstAttribute="top" secondItem="Qkc-mn-mO6" secondAttribute="top" id="liQ-YU-cYK"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="199" height="169"/>
                                         <connections>
-                                            <outlet property="albumImage" destination="XPH-2d-cLo" id="k4e-DL-PHs"/>
+                                            <outlet property="albumImage" destination="yfV-I8-iv3" id="2PY-Fm-Hog"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="delegate" destination="wzo-tX-scL" id="Jop-is-oxP"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YfK-G3-sP7"/>
@@ -156,8 +159,8 @@
                             <constraint firstItem="3i9-1Q-7HL" firstAttribute="top" secondItem="gIn-pd-ECV" secondAttribute="bottom" id="3aD-AO-xYP"/>
                             <constraint firstItem="YfK-G3-sP7" firstAttribute="trailing" secondItem="gIn-pd-ECV" secondAttribute="trailing" id="9UU-T8-VLO"/>
                             <constraint firstItem="gIn-pd-ECV" firstAttribute="leading" secondItem="YfK-G3-sP7" secondAttribute="leading" id="JSb-dI-f3w"/>
-                            <constraint firstItem="YfK-G3-sP7" firstAttribute="trailing" secondItem="3i9-1Q-7HL" secondAttribute="trailing" constant="20" id="Jpb-Fm-QgB"/>
-                            <constraint firstItem="3i9-1Q-7HL" firstAttribute="leading" secondItem="YfK-G3-sP7" secondAttribute="leading" constant="20" id="V0V-gR-rhW"/>
+                            <constraint firstItem="YfK-G3-sP7" firstAttribute="trailing" secondItem="3i9-1Q-7HL" secondAttribute="trailing" id="Jpb-Fm-QgB"/>
+                            <constraint firstItem="3i9-1Q-7HL" firstAttribute="leading" secondItem="YfK-G3-sP7" secondAttribute="leading" id="V0V-gR-rhW"/>
                             <constraint firstItem="YfK-G3-sP7" firstAttribute="bottom" secondItem="3i9-1Q-7HL" secondAttribute="bottom" id="VSQ-8k-83T"/>
                             <constraint firstItem="gIn-pd-ECV" firstAttribute="top" secondItem="YfK-G3-sP7" secondAttribute="top" constant="20" id="yYl-pl-5cx"/>
                         </constraints>
