@@ -20,6 +20,7 @@
 		22371FB32CF91FF300B3C140 /* AlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371FB22CF91FF300B3C140 /* AlbumsCell.swift */; };
 		22371FB52CF92B1A00B3C140 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371FB42CF92B1A00B3C140 /* User.swift */; };
 		22371FB72CF92C5800B3C140 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371FB62CF92C5800B3C140 /* NetworkService.swift */; };
+		22371FB92CF9343400B3C140 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371FB82CF9343400B3C140 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		22371FB22CF91FF300B3C140 /* AlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsCell.swift; sourceTree = "<group>"; };
 		22371FB42CF92B1A00B3C140 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		22371FB62CF92C5800B3C140 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		22371FB82CF9343400B3C140 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		22371FAE2CF9132700B3C140 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				22371FB82CF9343400B3C140 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				22371FB52CF92B1A00B3C140 /* User.swift in Sources */,
 				22371FB72CF92C5800B3C140 /* NetworkService.swift in Sources */,
 				22371FB32CF91FF300B3C140 /* AlbumsCell.swift in Sources */,
+				22371FB92CF9343400B3C140 /* ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

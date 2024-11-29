@@ -15,7 +15,7 @@ enum NetwrokService {
 extension NetwrokService : TargetType {
 
     var baseURL: URL {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com") else { fatalError("Invalid base URL") }
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com") else { fatalError("Invalid URL") }
         return url
     }
 
@@ -35,6 +35,6 @@ extension NetwrokService : TargetType {
     }
 
     var headers: [String : String]? {
-        return nil
+        return ["Content-Type" : "application/json"]
     }
 }
