@@ -22,7 +22,7 @@ class AlbumDetailsCell: UICollectionViewCell {
             albumImage.kf.setImage(with: URL(string: url), placeholder: UIImage(named: "images"))
 
         }else{
-            albumImage.image = UIImage(named: "")
+            albumImage.image = UIImage(named: "images")
         }
     }
 }
