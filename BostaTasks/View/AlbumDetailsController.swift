@@ -16,6 +16,7 @@ class AlbumDetailsController: UIViewController {
     var album:Albums?
     let disposeBag = DisposeBag()
     let viewModel = AlbumDetailsVM()
+    let filteredList : [Photos] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,18 +32,27 @@ class AlbumDetailsController: UIViewController {
         titleLabel.textAlignment = .left
         navigationItem.titleView = titleLabel
         
-       
-        setupCollectionView()
+       setupCollectionView()
+        setupSearch()
     }
     
     func setupCollectionView(){
         
-        viewModel.getImages(albumId: album?.id ?? 0)
         viewModel.photoPublishSub.bind(to: collectionView.rx.items(cellIdentifier: "albumDetails", cellType: AlbumDetailsCell.self)) { (index,item,cell) in
             cell.cellSetup(url: item.url )
             
         }.disposed(by: disposeBag)
     }
+    
+    func setupSearch(){
+        search.rx.text.subscribe(onNext:{ [weak self] value in
+            guard let self = self else {return}
+            self.viewModel.getImages(albumId: self.album?.id ?? 0,searchQuery: value)
+
+            
+        }).disposed(by: disposeBag)
+    }
+    
     
 }
 
