@@ -182,8 +182,19 @@
                     <view key="view" contentMode="scaleToFill" id="4lB-dI-xSf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3eZ-sB-3FD">
+                                <rect key="frame" x="0.0" y="108" width="414" height="298"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rNH-ko-bfy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3eZ-sB-3FD" firstAttribute="leading" secondItem="rNH-ko-bfy" secondAttribute="leading" id="2fl-vr-zwK"/>
+                            <constraint firstItem="3eZ-sB-3FD" firstAttribute="height" secondItem="4lB-dI-xSf" secondAttribute="height" multiplier="0.332589" id="LVp-Gc-kON"/>
+                            <constraint firstItem="rNH-ko-bfy" firstAttribute="trailing" secondItem="3eZ-sB-3FD" secondAttribute="trailing" id="RVP-lD-MMV"/>
+                            <constraint firstItem="3eZ-sB-3FD" firstAttribute="top" secondItem="rNH-ko-bfy" secondAttribute="top" constant="20" id="n90-V2-GkJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iYG-B9-ogU">
                         <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="mgD-Dj-jYb">
@@ -192,6 +203,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="3eZ-sB-3FD" id="BKp-eP-jpo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOv-Fx-I8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

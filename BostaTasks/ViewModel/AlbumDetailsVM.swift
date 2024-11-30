@@ -15,6 +15,8 @@ class AlbumDetailsVM{
     let photoPublishSub : PublishSubject<[Photos]> = PublishSubject()
     var allPhotos : [Photos] = []
     
+  //MARK: - Fetch images of specific album
+
     func getImages(albumId:Int,searchQuery:String?){
         if allPhotos.isEmpty{
         provider.request(.getPhotos(albumId: albumId)){ [weak self] result in
@@ -37,9 +39,9 @@ class AlbumDetailsVM{
         } else{
             filterByTitle(searchQuery: searchQuery)
         }
-    
-    
   }
+    
+    //MARK: - Filter images using the title
     
     func filterByTitle(searchQuery:String?){
         var filteredPhotos :[Photos] = []

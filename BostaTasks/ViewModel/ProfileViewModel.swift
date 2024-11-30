@@ -15,6 +15,9 @@ class ProfileViewModel{
     let userPubSub : PublishSubject<User> = PublishSubject()
     let userAlbumsPub : PublishSubject<[Albums]> = PublishSubject()
 
+    
+//MARK: - Fetch user's data
+    
     func getUser() {
         provider.request(.getUser){[weak self] result in
             guard let self = self else {return}
@@ -41,7 +44,8 @@ class ProfileViewModel{
         
     }
     
-    
+    //MARK: - Fetch user's albums
+
     func getAlbums(userId : Int){
       provider.request(.getUserAlbums(userId: userId)){ [weak self] result in
           guard let self = self else {return}

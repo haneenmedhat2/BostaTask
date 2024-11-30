@@ -23,9 +23,14 @@ class ProfileController: UIViewController {
         setupCellSelection()
     }
     
+    //MARK: - Show user's data
+    
     func viewUserData(){
         profileViewModel.getUser()
-        profileViewModel.userPubSub.subscribe{[weak self] value in
+        profileViewModel.userPubSub
+            .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
+            .observe(on: MainScheduler.instance)
+            .subscribe{[weak self] value in
             guard let self = self else {return}
             let user = value.element
             let name = user?.name ?? "Name not available"
@@ -39,16 +44,21 @@ class ProfileController: UIViewController {
             }.disposed(by: disposeBag)
       }
     
+    //MARK: - Tableview setup
+
     func setUpTable(userId:Int){
         profileViewModel.getAlbums(userId: userId)
-        profileViewModel.userAlbumsPub.bind(to: tableView.rx.items(cellIdentifier: "albums", cellType: AlbumsCell.self)) { (index,item,cell) in
+        profileViewModel.userAlbumsPub
+            .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
+            .observe(on: MainScheduler.instance)
+            .bind(to: tableView.rx.items(cellIdentifier: "albums", cellType: AlbumsCell.self)) { (index,item,cell) in
             
             cell.setupCell(title: item.title ?? "No title found")
         }.disposed(by: disposeBag)
-            
-        
     }
     
+    //MARK: - Cell selection setup
+
     func setupCellSelection(){
         tableView.rx.modelSelected(Albums.self)
             .subscribe(onNext: { [weak self] selectedItem in
@@ -56,13 +66,11 @@ class ProfileController: UIViewController {
                 let detailsController = self.storyboard?.instantiateViewController(withIdentifier: "details") as! AlbumDetailsController
                 detailsController.album = selectedItem
                 self.navigationController?.pushViewController(detailsController, animated: true)
-                
-                
             }).disposed(by: disposeBag)
     }
-
-
 }
+
+//MARK: - Tableview layouts
 
 extension ProfileController : UITableViewDelegate{
     

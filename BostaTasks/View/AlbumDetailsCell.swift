@@ -17,10 +17,10 @@ class AlbumDetailsCell: UICollectionViewCell {
         albumImage.frame = contentView.bounds
         
     }
+    
     func cellSetup(url:String?){
         if let url = url {
             albumImage.kf.setImage(with: URL(string: url), placeholder: UIImage(named: "images"))
-
         }else{
             albumImage.image = UIImage(named: "images")
         }
