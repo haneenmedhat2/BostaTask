@@ -4,7 +4,7 @@
    * Moya for network abstraction.
    * RxSwift/RxCocoa for reactive bindings.
    * Kingfisher (or any image library for caching and loading images).
-   * 
+     
 ## Features:
 * Show username and address.
 * Show albums for the selected user.
